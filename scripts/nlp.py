@@ -6,7 +6,6 @@ Modifiable command parser that asks for console input, constructs the correspond
 
 import rospy
 import sys
-import json
 from control_nodes import SequenceNode, SelectorNode, ParallelNode, RootNode, ClientNode, NavigationClientNode
 from action_nodes import twist_90, print_hello, navigate_rover
 from geometry_msgs.msg import Twist, Pose, Point, \
@@ -16,10 +15,6 @@ import os.path
 
 rospy.init_node('tree')
 
-with open(os.path.dirname(__file__) + '/../info/basement_demo_waypoints.json') as json_file:
-    #data = json.load(json_file)
-    for key in json.load(json_file):
-        print(key)
 
 #init temporary coordinates
 lab_coordinates = PoseStamped()
