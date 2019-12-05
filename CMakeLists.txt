@@ -65,6 +65,7 @@ find_package(catkin REQUIRED COMPONENTS
    action
    FILES
    BT.action
+   RoboBT.action
  )
 
 ## Generate added messages and services with any dependencies listed here
